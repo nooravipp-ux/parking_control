@@ -43,16 +43,16 @@ CREATE TABLE `members` (
   `nama_pemilik` varchar(50) DEFAULT NULL,
   `no_kendaraan` varchar(30) DEFAULT NULL,
   `jenis_kendaraan` varchar(50) DEFAULT NULL,
+  `tanggal_aktif` date DEFAULT NULL,
   PRIMARY KEY (`id_member`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `members` */
 
-insert  into `members`(`id_member`,`nama_pemilik`,`no_kendaraan`,`jenis_kendaraan`) values 
-('123-54647-111','UUS JUHANA','Z 53435 SER`','MOTOR'),
-('12345','jhon due','D 5343 RF','mobil'),
-('667','767g','hghg','ghjgh'),
-('hiuhkj','kjhjh','hjhk','kjhkj');
+insert  into `members`(`id_member`,`nama_pemilik`,`no_kendaraan`,`jenis_kendaraan`,`tanggal_aktif`) values 
+('123-54647-111','UUS JUHANA','Z 53435 SER`','MOTOR','2021-01-23'),
+('12345','jhon due','D 5343 RF','mobil','2021-01-23'),
+('5656565656','ghghggh','hjhhjhjh','hjjhhjhjhj','2021-01-23');
 
 /*Table structure for table `migrations` */
 
@@ -97,17 +97,13 @@ CREATE TABLE `transaksi` (
   `tanggal` datetime DEFAULT NULL,
   `status` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`kode`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `transaksi` */
 
 insert  into `transaksi`(`kode`,`id_member`,`no_kendaraan`,`jenis_kendaraan`,`tanggal`,`status`) values 
-(1,'22344533','D 87464 SH','MOBIL','2021-01-22 16:28:45','IN'),
-(2,'123-54647-111','Z 53435 SER`','MOTOR','2021-01-22 11:46:28','IN'),
-(3,'12345','D 5343 RF','mobil','2021-01-22 11:48:00','IN'),
-(4,'123-54647-111','Z 53435 SER`','MOTOR','2021-01-22 01:55:50','IN'),
-(5,'123-54647-111','Z 53435 SER`','MOTOR','2021-01-22 02:00:23','IN'),
-(6,'123-54647-111','Z 53435 SER`','MOTOR','2021-01-22 02:03:06','OUT');
+(13,'123-54647-111','Z 53435 SER`','MOTOR','2021-01-23 00:35:56','IN'),
+(14,'123-54647-111','Z 53435 SER`','MOTOR','2021-01-23 00:36:18','OUT');
 
 /*Table structure for table `users` */
 
