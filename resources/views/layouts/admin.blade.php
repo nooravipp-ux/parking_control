@@ -25,12 +25,9 @@
 <body class="">
     <div class="wrapper ">
         <div class="sidebar" data-color="orange">
-            <!--
-        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
-    -->
             <div class="logo">
-                <img src="{{asset('theme/img/logo.png')}}" width="100" alt="" class="img-fluid text-center">
-                <a href="{{url('/home')}}" class="simple-text logo-normal">
+                <img src="{{asset('theme/img/logo.png')}}" width="100" alt="" class="img-fluid text-center" style="margin-left: 58px;">
+                <a href="{{url('/home')}}" class="simple-text logo-normal" style="margin-left: 48px;">
                     Parking System
                 </a>
             </div>

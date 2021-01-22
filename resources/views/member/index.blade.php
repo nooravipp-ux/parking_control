@@ -14,9 +14,7 @@
                         <div class="col-md-3">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="image">
-                                        <img src="{{asset('theme/img/user-logo.jpg')}}" alt="...">
-                                    </div>
+                                <img src="{{asset('theme/img/user-logo.jpg')}}" alt="...">
                                 </div>
                             </div>
                         </div>
@@ -88,7 +86,7 @@
                                 Jenis Kendaraan
                             </th>
                             <th>
-                                Status
+                                Tanggal Aktif
                             </th>
                             <th>
                                 Action
@@ -110,7 +108,7 @@
                                     {{$member->jenis_kendaraan}}
                                 </td>
                                 <td>
-                                    Member
+                                    {{$member->tanggal_aktif}}
                                 </td>
                                 <td>
                                     <a href="">Delete</a>

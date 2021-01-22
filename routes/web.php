@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 
@@ -28,5 +28,6 @@ Route::get('/members', [App\Http\Controllers\MemberController::class, 'index']);
 Route::post('/members/save', [App\Http\Controllers\MemberController::class, 'save'])->name('member.save');
 
 Route::get('/transaksi', [App\Http\Controllers\TransaksiController::class, 'index']);
+Route::get('/transaksi/export_excel', [App\Http\Controllers\TransaksiController::class, 'export_excel']);
 Route::post('/transaksi/filter', [App\Http\Controllers\TransaksiController::class, 'filter_data'])->name('transaksi.filter');;
 

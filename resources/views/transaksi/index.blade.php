@@ -6,7 +6,7 @@
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title"> Data in - out Kendaraan</h4>
-                <a class="float-right" href="">Import Data</a>
+                <a class="float-right" href="{{url('/transaksi/export_excel')}}" target="_blank">Export Data</a>
             </div>
             <div class="card-body">
                 <form class="form-inline" action="{{route('transaksi.filter')}}" method="POST">

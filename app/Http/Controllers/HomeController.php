@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use DB;
 use App\Models\Transaksi;
 use App\Models\Member;
+use DateTime;
+use DateTimeZone;
 class HomeController extends Controller
 {
     /**
@@ -30,12 +32,13 @@ class HomeController extends Controller
 
     public function gate_in(Request $request){
         if($this->cek_member($request->id_member)){
+            $dt = new DateTime("now", new DateTimeZone('Asia/Jakarta'));
             $data_member = DB::table('members')->where('id_member',$request->id_member)->first();
             $data_transaksi = new Transaksi;
             $data_transaksi->id_member = $data_member->id_member;
             $data_transaksi->no_kendaraan = $data_member->no_kendaraan;
             $data_transaksi->jenis_kendaraan = $data_member->jenis_kendaraan;
-            $data_transaksi->tanggal = date("Y/m/d h:i:s");
+            $data_transaksi->tanggal = $dt->format('Y/m/d G:i:s');
             $data_transaksi->status = "IN";
             $data_transaksi->save();
 
@@ -47,12 +50,13 @@ class HomeController extends Controller
 
     public function gate_out(Request $request){
         if($this->cek_member($request->id_member)){
+            $dt = new DateTime("now", new DateTimeZone('Asia/Jakarta'));
             $data_member = DB::table('members')->where('id_member',$request->id_member)->first();
             $data_transaksi = new Transaksi;
             $data_transaksi->id_member = $data_member->id_member;
             $data_transaksi->no_kendaraan = $data_member->no_kendaraan;
             $data_transaksi->jenis_kendaraan = $data_member->jenis_kendaraan;
-            $data_transaksi->tanggal = date("Y/m/d h:i:s");
+            $data_transaksi->tanggal = $dt->format('Y/m/d G:i:s');
             $data_transaksi->status = "OUT";
             $data_transaksi->save();
 

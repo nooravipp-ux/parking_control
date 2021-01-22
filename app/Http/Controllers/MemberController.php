@@ -30,4 +30,12 @@ class MemberController extends Controller
         $member->save();
         return redirect('/members')->with('success', 'Member saved!');
     }
+
+    public function destroy(Product $product)
+    {
+        $product->delete();
+
+        return redirect()->route('products.index')
+            ->with('success', 'Product deleted successfully');
+    }
 }

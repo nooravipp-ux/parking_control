@@ -4,9 +4,6 @@
 <div class="row">
     <div class="col-md-12">
         <div class="card">
-            <div class="card-header">
-                <h4 class="card-title"> Kendaraan Masuk </h4>
-            </div>
             <div class="card-body">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
@@ -24,6 +21,7 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header">
+                                        <h4>Kendaraan Masuk</h4>
                                         <h4 class="card-title">
                                             @if ($message = Session::get('success'))
                                             <div class="alert alert-success alert-block">
@@ -45,24 +43,15 @@
                                             <div class="row">
                                                 <div class="col-md-3">
                                                     <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="image">
-                                                                <img src="{{asset('theme/img/rfid.png')}}" alt="...">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="row">
-                                                        <div class="col-md-8 pr-1">
+                                                        <div class="col-md-12 text-center">
+                                                            <img src="{{asset('theme/img/rfid.png')}}" alt="...">
                                                             <div class="form-group">
-                                                                <label>ID (Tap atau Input RFID)</label>
+                                                                <label class="">ID (Tap atau Input RFID)</label>
                                                                 <input type="text" class="form-control"
                                                                     name="id_member">
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
 
@@ -84,6 +73,7 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header">
+                                        <h4>Kendaraan Keluar</h4>
                                         <h4 class="card-title">
                                             @if ($message = Session::get('success'))
                                             <div class="alert alert-success alert-block">
@@ -105,29 +95,12 @@
                                             <div class="row">
                                                 <div class="col-md-3">
                                                     <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="image">
-                                                                <img src="{{asset('theme/img/rfid.png')}}" alt="...">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="row">
-                                                        <div class="col-md-8 pr-1">
+                                                        <div class="col-md-12 text-center">
+                                                            <img src="{{asset('theme/img/rfid.png')}}" alt="...">
                                                             <div class="form-group">
                                                                 <label>ID (Tap atau Input RFID)</label>
                                                                 <input type="text" class="form-control"
                                                                     name="id_member">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-8 pr-1">
-                                                            <div class="form-group">
-                                                                <label>No Kendaraan</label>
-                                                                <input type="text" class="form-control"
-                                                                    name="no_kendaraan">
                                                             </div>
                                                         </div>
                                                     </div>
